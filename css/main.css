@@ -309,10 +309,7 @@
     color: #fff;
     background-color: #39a030;
 }
-.data-list{
-    /*height: 1238px;*/
-    /*overflow-y: hidden;*/
-}
+
 .data-list .c-templete{
     display: none;
 }
@@ -654,10 +651,10 @@
     right: 0;
     bottom: 0;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.7);
-    /*background-color:#000;
-    opacity: .7;
-    filter:alpha(opacity=70);*/
+    background:rgb(0,0,0);  
+    background: transparent;  
+    background:rgba(0,0,0,0.7);  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2000000',endColorstr='#b2000000'); /* IE8 */
 }
 .mask .login{
     position: absolute;

@@ -166,7 +166,7 @@ window.onload = function () {
                     addClass(suBtn, "disabled");
                 } else {
                     var options = { userName: md5(accountValue), password: md5(passwordValue) };
-                    var url = 'http://study.163.com/webDev/login.htm';
+                    var url = 'https://study.163.com/webDev/login.htm';
                     console.log(options);
                     function sub(response) {
                         if (response == 1) {
@@ -198,7 +198,7 @@ window.onload = function () {
         })();
 
         function followAPI() {
-            var url = 'http://study.163.com/webDev/attention.htm';
+            var url = 'https://study.163.com/webDev/attention.htm';
             get(url, null, function (response) {
                 if (response == 1) {
                     setCookie('followSuc', 1, new Date(6666, 6));
@@ -239,7 +239,7 @@ window.onload = function () {
     //  右侧“最热排行”
 
     var top_module = (function () {
-        var url = 'http://study.163.com/webDev/hotcouresByCategory.htm';
+        var url = 'https://study.163.com/webDev/hotcouresByCategory.htm';
         var oUl = document.querySelector('.top');
         var aLi = oUl.getElementsByTagName('li');
 
@@ -279,7 +279,7 @@ window.onload = function () {
     // 获取课程列表
 
     var course_module = (function () {
-        var url = 'http://study.163.com/webDev/couresByCategory.htm';
+        var url = 'https://study.163.com/webDev/couresByCategory.htm';
         var pageSize = 20;
         var pageType = 10;
         var main = document.querySelector('.main');

@@ -182,7 +182,7 @@ function page(opt) {
     if (!opt.id) return false;
     var obj = opt.id;
     var nowNum = opt.nowNum || 1;
-    var allNum = opt.allNum || 8;
+    var allNum = opt.allNum;
     var callback = opt.callback || function () { };
     var point = 5;
     var pageInit = function (i) {
@@ -206,7 +206,7 @@ function page(opt) {
     }
     obj.appendChild(oA);
     //生成具体页数
-    for (var i = 1; i <= 8; i++) {
+    for (var i = 1; i <= allNum; i++) {
         var oA = pageInit(i);
         obj.appendChild(oA);
     }
@@ -218,7 +218,7 @@ function page(opt) {
         oA.className = 'next';
     } else {
         oA.className = 'next disabled';
-        oA.setAttribute('index', 8);
+        oA.setAttribute('index', allNum);
     }
     obj.appendChild(oA);
 
@@ -231,6 +231,7 @@ function page(opt) {
                 page({
                     id: opt.id,
                     nowNum: nowNum,
+                    allNum:allNum,
                     callback: callback
                 });
                 callback(nowNum, allNum);

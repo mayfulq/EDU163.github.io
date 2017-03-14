@@ -242,6 +242,8 @@ window.onload = function () {
         var url = 'https://study.163.com/webDev/hotcouresByCategory.htm';
         var oUl = document.querySelector('.top');
         var aLi = oUl.getElementsByTagName('li');
+        var topbox = document.querySelector('.topbox');
+        var flag=true;
 
         get(url, null, getTopList);
 
@@ -271,7 +273,22 @@ window.onload = function () {
             oUl.removeChild(aLi[21]);
         }
 
-        setInterval(scroll, 5000);
+        var timer=setInterval(scroll, 5000);
+
+
+        topbox.onmouseover = function () {
+            if (flag) {
+                clearInterval(timer);
+                flag = false;
+            }
+        };
+
+        topbox.onmouseout = function () {
+            if (!flag) {
+                timer = setInterval(scroll, 5000);
+                flag = true;
+            }
+        };
 
     })();
 

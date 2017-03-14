@@ -362,7 +362,7 @@ window.onload = function () {
                 orgname.innerHTML = list[i].provider;
                 num.innerHTML = list[i].learnerCount;
                 price.innerHTML = (list[i].price) ? '￥' + list[i].price + '.00' : '免费';
-                kindname.innerHTML = list[i].categoryName;
+                kindname.innerHTML = (list[i].categoryName==null)?'无':list[i].categoryName;
                 disc.innerHTML = ellipsis(list[i].description);
                 templete.parentNode.appendChild(cloned);
             }

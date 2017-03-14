@@ -437,6 +437,9 @@
     font-size: 12px;
     color: #666;
 }
+.data-list-item .wrap:hover .kindname:before{
+    content: '分类：';
+}
 .data-list-item .wrap:hover .price{
     display: none;
 }

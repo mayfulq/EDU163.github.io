@@ -322,12 +322,7 @@
     background-color: #fff;
     outline:1px solid #dcdcdc; 
 }
-/*.data-list:hover{
-    overflow: visible;
-}*/
-/*.data-list-item:hover{
-    overflow: visible;
-}*/
+
 .data-list-item .wrap{
     display: block;
     height: 228px;
@@ -511,7 +506,7 @@
 .side .introduce{
     width: 223px;
     height: 229px;
-    box-shadow: 0px 1px 1px 0px rgba(6, 0, 1, 0.2);
+    box-shadow: 0px 1px 1px 0px #dcdcdc;
     outline:1px solid #dcdcdc; 
     background-color: #fff;
 }
@@ -538,12 +533,16 @@
     width: 223px;
     margin-top: 21px;
     background-color: #fff;
-    box-shadow: 0px 1px 1px 0px rgba(6, 0, 1, 0.2);
+    box-shadow: 0px 1px 1px 0px #dcdcdc;
     outline:1px solid #dcdcdc; 
 }
 .toplist .topbox{
     height: 720px;
     overflow: hidden;
+}
+.toplist .topbox:hover{
+    cursor: pointer;
+    box-shadow: 0px 3px 3px 0px #dcdcdc;
 }
 .toplist .item{
      padding: 20px 20px 0 20px;
@@ -568,6 +567,9 @@
      overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.toplist h3:hover{
+    color: #39a030;
 }
 .toplist .num{
      display: inline-block;
@@ -669,8 +671,6 @@
     margin-top: -144px;
     background-color: #fff;
     z-index: 200;
-    /*opacity: 1;
-    filter:alpha(opacity=100);*/
 }
 .m-form .tit{
     padding: 30px 39px 20px;
@@ -775,13 +775,3 @@
     background:url('../img/icon.png')  -26px -1px no-repeat;;
     cursor: pointer;
 }
-/*自适应*/
-/*@media screen and (max-width: 1205px){
-   
-    .content{
-        width: 960px;
-    }
-    .content .main{
-        width: 735px;
-    }
-}*/

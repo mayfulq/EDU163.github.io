@@ -338,7 +338,7 @@
 .data-list-item .tt{
     font-size: 12px;
     line-height: 12px;
-    margin: 5px 0 10px 5px;
+    margin: 5px 10px 10px 5px;
     color:#333;
     overflow: hidden;
     text-overflow: ellipsis;

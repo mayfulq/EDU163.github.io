@@ -403,10 +403,13 @@ window.onload = function () {
             var tips_content = document.querySelector('.tips-content');
             
             
-            var winWidth;
-            if ((document.body) && (document.body.client))
-                winWidth = document.body.clientWidth;
-                tips.style.width = winWidth+'px';
+            var winWidth = document.body.clientWidth;
+            tips.style.width = winWidth+'px';
+            // if ((document.body) && (document.body.client)){
+            //      winWidth = document.body.clientWidth;
+            //      tips.style.width = winWidth+'px';
+            // }
+               
             if (winWidth < 1205) {
                  // 顶部tips自适应
                   

@@ -393,20 +393,61 @@ window.onload = function () {
     var autoFix_module = (function () {
 
         window.onresize = function () {
-            var contentWidth = document.querySelector('.conttentbox .content');
-            var mainWidth = document.querySelector('.main');
+            var content = document.querySelector('.conttentbox .content');
+            var main = document.querySelector('.main');
+            var school=document.querySelector('.school');
+            var commen=school.getElementsByTagName('div');
+            var banner = document.querySelector('.banner');
+            var banner_img = banner.getElementsByTagName('img');
+            var tips = document.querySelector('.tips');
+            var tips_content = document.querySelector('.tips-content');
+            
+            
             var winWidth;
-            if (window.innerWidth)
-                winWidth = window.innerWidth;
-            else if ((document.body) && (document.body.clientWidth))
+            if ((document.body) && (document.body.client))
                 winWidth = document.body.clientWidth;
+                tips.style.width = winWidth+'px';
             if (winWidth < 1205) {
-                contentWidth.style.width = '960px';
-                mainWidth.style.width = '735px';
+                 // 顶部tips自适应
+                  
+                  tips_content.style.width = '960px';
+                // 课程区自适应
+                content.style.width = '960px';
+                main.style.width = '735px';
+                // 轮播图自适应
+                for(var i=0,len=banner_img.length;i<len;i++){
+                    banner_img[i].style.width = '1364px';
+                    banner_img[i].style.marginLeft = '-682px';
+                }
+                // 轮播图下方三大课堂介绍自适应
+                school.style.width = '960px';
+                for(var i=0,len=commen.length;i<len;i++){
+                    commen[i].style.width = '172px';
+                }
+                for(var i=0,len=commen.length;i<len-1;i++){
+                    commen[i].style.marginRight = '72px';
+                }
             }
             else if (winWidth >= 1205) {
-                contentWidth.style.width = '1205px';
-                mainWidth.style.width = '980px';
+                // 顶部tips自适应
+                  tips_content.style.width = '1202px';
+                // 课程区自适应
+                content.style.width = '1205px';
+                main.style.width = '980px';
+                 // 轮播图自适应
+                for(var i=0,len=banner_img.length;i<len;i++){
+                    banner_img[i].style.width = '1616px';
+                    banner_img[i].style.marginLeft = '-808px';
+                }
+                // 轮播图下方三大课堂介绍自适应
+                school.style.width = '1187px';
+                 for(var i=0,len=commen.length;i<len;i++){
+                    commen[i].style.width = '239px';
+                }
+                for(var i=0,len=commen.length;i<len-1;i++){
+                    commen[i].style.marginRight = '84px';
+                }
+              
 
             }
 

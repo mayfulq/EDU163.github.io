@@ -1,12 +1,12 @@
 /*顶部消息通知*/
 .tips{
-    width: 1616px;
+    width: 100%;
     height: 36px;
     background-color: #f3f3f3;
     font: 12px "Microsoft Yahei";
     margin: 0 auto;
 }
-.tips .content{
+.tips-content{
     width: 1202px;
     height: 36px;
     margin: 0 auto;
@@ -32,8 +32,6 @@
 }
 /*header*/
 .header{
-    width: 1616px;
-    height: 850px;
     background-color: #fff;
     margin: 0 auto;
 }
@@ -186,8 +184,6 @@
     z-index: 3;
     margin-left: -30px;
     text-align: center;
-    /*outline: 2px solid red;*/
-
 }
 .banner .nav li{
     display: inline-block;
@@ -209,6 +205,10 @@
     height: 460px;
 }
 .banner .list img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -808px;
     width: 1616px;
     height: 460px;
     filter:alpha(opacity=100);
@@ -219,20 +219,12 @@
     opacity: 1;
     filter:alpha(opacity=100);
 }
-.banner .pic{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -808px;
-    width: 1616px;
-    height: 460px;
-}
 /*school*/
 .school{
     width: 1187px;
     margin: 0 auto;
     padding-top: 61px;
-    padding-bottom: 78px;
+    padding-bottom: 61px;
 }
 .commen{
     float: left;
@@ -247,6 +239,7 @@
     padding: 20px 0 33px;
     line-height: 24px;
     color: #656565;
+    word-break: break-all; 
 }
 .school-1,.school-2{
     margin-right: 84px;
@@ -266,6 +259,7 @@
     height: 301px;
     background-color: #f8f8f8;
     margin: 0 auto;
+    display: none;
 }
 /*content*/
 .conttentbox{

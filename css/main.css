@@ -261,15 +261,11 @@
     background:url('../img/icon3.png') 0 7px no-repeat;
 }
 /*middle*/
-.middlebox{
+.middle{
     width: 1616px;
     height: 301px;
     background-color: #f8f8f8;
     margin: 0 auto;
-}
-.middle{
-    width: 1616px;
-    margin-bottom: 81px;
 }
 /*content*/
 .conttentbox{

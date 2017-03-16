@@ -392,7 +392,7 @@ window.onload = function () {
     //自适应
     var autoFix_module = (function () {
 
-        window.onresize = function () {
+        function autoFix() {
             var content = document.querySelector('.conttentbox .content');
             var main = document.querySelector('.main');
             var school=document.querySelector('.school');
@@ -454,14 +454,13 @@ window.onload = function () {
                 for(var i=0,len=commen.length;i<len-1;i++){
                     commen[i].style.marginRight = '84px';
                 }
-              
-
             }
-
         }
+        // 页面加载后自动执行自适应
+        autoFix();
+        // 监听window窗口大小变化，执行执行自适应
+        addEvent(window,'resize',autoFix);
     })()
-
-
 
 
 }

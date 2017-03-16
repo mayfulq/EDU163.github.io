@@ -401,6 +401,7 @@ window.onload = function () {
             var banner_img = banner.getElementsByTagName('img');
             var tips = document.querySelector('.tips');
             var tips_content = document.querySelector('.tips-content');
+            var navbar=document.querySelector('.navbar');
             
             
             var winWidth = document.body.clientWidth;
@@ -412,8 +413,9 @@ window.onload = function () {
                
             if (winWidth < 1205) {
                  // 顶部tips自适应
-                  
                   tips_content.style.width = '960px';
+                   // 头部navbar自适应
+                  navbar.style.width = '960px';
                 // 课程区自适应
                 content.style.width = '960px';
                 main.style.width = '735px';
@@ -434,6 +436,8 @@ window.onload = function () {
             else if (winWidth >= 1205) {
                 // 顶部tips自适应
                   tips_content.style.width = '1202px';
+                   // 头部navbar自适应
+                  navbar.style.width = '1202px';
                 // 课程区自适应
                 content.style.width = '1205px';
                 main.style.width = '980px';

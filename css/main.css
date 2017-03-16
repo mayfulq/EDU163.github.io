@@ -176,6 +176,7 @@
 /*banner*/
 .banner{
     position: relative;
+    overflow: hidden;
 }
 .banner .nav{
     position: absolute;
@@ -258,6 +259,7 @@
     position: relative;
     height: 301px;
     background-color: #f8f8f8;
+    overflow: hidden;
 }
 .middle{
     position: absolute;

@@ -405,12 +405,7 @@ window.onload = function () {
             
             
             var winWidth = document.body.clientWidth;
-            tips.style.width = winWidth+'px';
-            // if ((document.body) && (document.body.client)){
-            //      winWidth = document.body.clientWidth;
-            //      tips.style.width = winWidth+'px';
-            // }
-               
+            tips.style.width = winWidth+'px';    
             if (winWidth < 1205) {
                  // 顶部tips自适应
                   tips_content.style.width = '960px';

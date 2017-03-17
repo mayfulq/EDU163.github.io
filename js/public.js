@@ -1,5 +1,5 @@
 /**
- * 跨浏览器添加事件
+ * [跨浏览器添加事件]
  * @param {*} obj 
  * @param {*} type 
  * @param {*} fn 
@@ -57,7 +57,7 @@ function setCookie(name, value, expires, path, domain, secure) {
 }
 
 /**
- * 判断是否有某个className
+ * [判断是否有某个className]
  * @param {*} element 
  * @param {*} className 
  */
@@ -77,7 +77,7 @@ function hasClass(element, className) {
 
 
 /**
- * 添加className
+ * [添加className]
  * @param {*} element 
  * @param {*} className 
  */
@@ -89,7 +89,7 @@ function addClass(element, className) {
 }
 
 /**
- * 删除元素className
+ * [删除元素className]
  * @param {*} element 
  * @param {*} className 
  */
@@ -107,25 +107,6 @@ function removeClass(element, className) {
     }
 }
 
-// function text(ele,str){
-//     if(ele&&ele.nodeType&&ele.nodeType===1){
-//         if(str==undefined){
-//             if(typeof ele.textContent=='string'){
-//                 return ele.textContent;
-//             }else{
-//                 return ele.innerText;
-//             }
-//         }
-//         else if(typeof str=='string'){
-//             if(typeof ele.textContent=='string'){
-//                 return ele.textContent;
-//             }else{
-//                 return ele.innerText;
-//             }
-
-//         }
-//     }
-// }
 
 /**
  * [get请求函数封装]
@@ -151,7 +132,7 @@ function get(url, options, callback) {
     xhr.send();
 }
 /**
- * 表单序列化封装
+ * [表单序列化封装]
  * @param {*} data 
  */
 function serialize(data) {
@@ -175,7 +156,7 @@ function serialize(data) {
 }
 
 /**
- * page分页封装
+ * [page分页封装]
  * @param {*} opt 
  */
 function page(opt) {
@@ -242,7 +223,7 @@ function page(opt) {
 }
 
 /**
- * 多行省略显示
+ * [多行省略显示]
  * @param {*} str 
  */
 function ellipsis(str) {
@@ -255,7 +236,7 @@ function ellipsis(str) {
 }
 
 /**
- * setOpacity设置透明度
+ * [setOpacity设置透明度]
  * @param {*} ele 
  * @param {*} opacity 
  */
@@ -271,7 +252,7 @@ function ellipsis(str) {
 }
 
 /**
- * fadeIn淡入
+ * [fadeIn淡入]
  * @param {*} ele 
  * @param {*} opacity 
  */

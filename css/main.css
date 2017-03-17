@@ -613,16 +613,14 @@
     color: #AAADB0;
 }
 .footer .footerbox{
-    width: 1050px;
-    
+    width: 960px;
     margin: 0 auto;
     color: #AAADB0;
     
 }
 .footer .info{
     float: left;
-    padding: 92px 150px 0 52px;
-    padding-right: 150px;
+    padding: 92px 150px 0 20px;
     width: 393px;
 }
 .footer .info .logo {

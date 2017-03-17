@@ -294,15 +294,16 @@ window.onload = function () {
 
 
     // 获取课程列表
-
-    var course_module = (function () {
+    var course_module = function () {
         var url = 'https://study.163.com/webDev/couresByCategory.htm';
-        var pageSize = 20;
-        var pageType = 10;
         var main = document.querySelector('.main');
         var nav = main.querySelector('.nav');
+        var selectedA=nav.querySelector('.selected');
         var pager = main.querySelector('.pager');
-
+        var pageType=(selectedA.getAttribute('data')==10)?10:20;
+        
+        pageSize =(document.body.clientWidth<1205)?15:20;
+        //tab课程类型切换
         function toggleBtn(event) {
             var event = event || window.event;
             var target = event.target || event.srcElement;
@@ -319,7 +320,6 @@ window.onload = function () {
             }
             console.log('筛选类型:' + pageType);
             pageType = target.getAttribute('data');
-            pager.innerHTML = '';
             getPageNum(1);
             event.preventDefault();
 
@@ -384,10 +384,7 @@ window.onload = function () {
                 templete.parentNode.appendChild(cloned);
             }
         }
-
-
-
-    })();
+      }
 
     //自适应
     var autoFix_module = (function () {
@@ -401,11 +398,11 @@ window.onload = function () {
             var banner_img = banner.getElementsByTagName('img');
             var tips = document.querySelector('.tips');
             var tips_content = document.querySelector('.tips-content');
-            var navbar=document.querySelector('.navbar');
-            
-            
+            var navbar=document.querySelector('.navbar');           
             var winWidth = document.body.clientWidth;
-            tips.style.width = winWidth+'px';    
+            tips.style.width = winWidth+'px';
+            //窗口大小变化后，根据pageSize值改变，，调用获取课程列表模型(course_module),重新生成课程列表
+            course_module();   
             if (winWidth < 1205) {
                  // 顶部tips自适应
                   tips_content.style.width = '960px';
@@ -453,7 +450,7 @@ window.onload = function () {
         }
         // 页面加载后自动执行自适应
         autoFix();
-        // 监听window窗口大小变化，执行执行自适应
+        // 监听window窗口大小变化，执行自适应
         addEvent(window,'resize',autoFix);
     })()
 

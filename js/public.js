@@ -165,7 +165,7 @@ function page(opt) {
     var nowNum = opt.nowNum || 1;
     var allNum = opt.allNum;
     var callback = opt.callback || function () { };
-    var point = 5;
+    var pager = document.querySelector('.pager');
     var pageInit = function (i) {
         var oA = document.createElement('a');
         oA.setAttribute('index', i);
@@ -176,6 +176,7 @@ function page(opt) {
         }
         return oA;
     }
+     pager.innerHTML = '';
     //当前页不等于1时上一页可选
     var oA = document.createElement('a');
     oA.innerHTML = '上一页';
@@ -221,6 +222,7 @@ function page(opt) {
         }
     }
 }
+    
 
 /**
  * [多行省略显示]

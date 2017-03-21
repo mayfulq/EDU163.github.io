@@ -72,3 +72,12 @@
 e.preventDefault();
 ```
 详情[w3cschool](http://www.w3cschool.cn/javascript/javascript-void.html)
+
+
+7.取消图片换行时产生的默认间距
+```css
+.container{
+  font-size:0;
+}
+```
+>因为换行会产生一个空白节点，将字体设置为0即可取消此空白
